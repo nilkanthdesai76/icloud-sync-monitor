@@ -8,7 +8,7 @@ final class SystemHealthGovernor: ObservableObject {
     @Published var health = SystemHealthStatus()
 
     private let pathMonitor = NWPathMonitor()
-    private let monitorQueue = DispatchQueue(label: "com.mindspark.networkmonitor")
+    private let monitorQueue = DispatchQueue(label: "com.nilkanthdesai.networkmonitor")
     private var cancellables = Set<AnyCancellable>()
 
     init() {
