@@ -77,11 +77,11 @@ struct ColdOLEDNightView: View {
                     if cplInspector.queueStatus.totalPendingUpload > 0 {
                         Text("\(cplInspector.queueStatus.totalPendingUpload.formatted()) items pending in Apple upload queue")
                             .font(.caption2.monospaced())
-                            .foregroundStyle(.white.opacity(0.6))
+                            .foregroundStyle(.white.opacity(0.7))
                     } else {
-                        Text("Screen at 0% OLED power • Device kept cool & awake")
+                        Text("\(cplInspector.queueStatus.statusDescription) • Screen at 0% OLED power")
                             .font(.caption2.monospaced())
-                            .foregroundStyle(.white.opacity(0.4))
+                            .foregroundStyle(.white.opacity(0.5))
                     }
                 }
                 .padding(16)

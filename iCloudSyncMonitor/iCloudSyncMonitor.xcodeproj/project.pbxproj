@@ -17,6 +17,7 @@
 		B100000F0000000000000001 /* CPLDiagnosticCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000100000000000000001 /* CPLDiagnosticCard.swift */; };
 		B10000110000000000000001 /* SystemGovernorCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000120000000000000001 /* SystemGovernorCard.swift */; };
 		B10000130000000000000001 /* PhotoLibraryStatsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B10000140000000000000001 /* PhotoLibraryStatsCard.swift */; };
+		B10000280000000000000001 /* CPLEngineProbe.m in Sources */ = {isa = PBXBuildFile; fileRef = B10000290000000000000001 /* CPLEngineProbe.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,9 @@
 		B10000100000000000000001 /* CPLDiagnosticCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPLDiagnosticCard.swift; sourceTree = "<group>"; };
 		B10000120000000000000001 /* SystemGovernorCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemGovernorCard.swift; sourceTree = "<group>"; };
 		B10000140000000000000001 /* PhotoLibraryStatsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryStatsCard.swift; sourceTree = "<group>"; };
+		B10000290000000000000001 /* CPLEngineProbe.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CPLEngineProbe.m; sourceTree = "<group>"; };
+		B100002A0000000000000001 /* CPLEngineProbe.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CPLEngineProbe.h; sourceTree = "<group>"; };
+		B100002B0000000000000001 /* iCloudSyncMonitor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iCloudSyncMonitor-Bridging-Header.h"; sourceTree = "<group>"; };
 		B10000150000000000000001 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B10000160000000000000001 /* iCloudSyncMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iCloudSyncMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,6 +65,7 @@
 				B100001B0000000000000001 /* Models */,
 				B100001C0000000000000001 /* Services */,
 				B100001D0000000000000001 /* Views */,
+				B100002B0000000000000001 /* iCloudSyncMonitor-Bridging-Header.h */,
 				B10000150000000000000001 /* Info.plist */,
 			);
 			path = iCloudSyncMonitor;
@@ -85,6 +90,8 @@
 		B100001C0000000000000001 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				B100002A0000000000000001 /* CPLEngineProbe.h */,
+				B10000290000000000000001 /* CPLEngineProbe.m */,
 				B10000080000000000000001 /* CPLRuntimeInspector.swift */,
 				B100000A0000000000000001 /* SystemHealthGovernor.swift */,
 				B100000C0000000000000001 /* PhotoLibraryAnalyzer.swift */,
@@ -181,6 +188,7 @@
 				B100000F0000000000000001 /* CPLDiagnosticCard.swift in Sources */,
 				B10000110000000000000001 /* SystemGovernorCard.swift in Sources */,
 				B10000130000000000000001 /* PhotoLibraryStatsCard.swift in Sources */,
+				B10000280000000000000001 /* CPLEngineProbe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +260,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCloudSyncMonitor/iCloudSyncMonitor-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -278,6 +287,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "iCloudSyncMonitor/iCloudSyncMonitor-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

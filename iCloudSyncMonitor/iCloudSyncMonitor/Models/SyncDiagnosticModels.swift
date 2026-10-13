@@ -3,17 +3,24 @@ import UIKit
 import Photos
 
 struct CPLQueueStatus: Equatable {
+    var statusDescription: String = "Monitoring..."
     var numberOfImagesToUpload: Int = 0
     var numberOfVideosToUpload: Int = 0
     var numberOfOtherItemsToUpload: Int = 0
+    var pendingUploadCount: Int = 0
     var isSyncing: Bool = false
     var hasChangesToProcess: Bool = false
     var isFrameworkAvailable: Bool = false
+    var isBlockedByLowPowerMode: Bool = false
+    var hasThermalPressure: Bool = false
     var pauseReason: String? = nil
     var lastCheckDate: Date = Date()
 
     var totalPendingUpload: Int {
-        numberOfImagesToUpload + numberOfVideosToUpload + numberOfOtherItemsToUpload
+        if pendingUploadCount > 0 {
+            return pendingUploadCount
+        }
+        return numberOfImagesToUpload + numberOfVideosToUpload + numberOfOtherItemsToUpload
     }
 }
 
